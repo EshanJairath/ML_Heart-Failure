@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Heart Failure Detection</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet"  href="../static/index.css">
+</head>
+
+
+<body class="">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <img src="../static/images/logo.png" class="brand_img" alt="logo.png">
+      <a class="navbar-brand" href="#">Hermes Hospital </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active " aria-current="page" href="#">Heart Failure Prediction </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Kidney Test</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="prject-info container mt-5" >
+
+    <h1> Heart Failure Prediction Model </h1>
+    <p class="project-info-para">
+      Cardiovascular diseases (CVDs) are the number 1 cause of death globally, taking an estimated 17.9 million lives each year, which accounts for 31% of all deaths worlwide.
+      Heart failure is a common event caused by CVDs and this dataset contains 12 features that can be used to predict mortality by heart failure.
+
+      Most cardiovascular diseases can be prevented by addressing behavioural risk factors such as tobacco use, unhealthy diet and obesity, physical inactivity and harmful use of alcohol using population-wide strategies.
+
+      People with cardiovascular disease or who are at high cardiovascular risk (due to the presence of one or more risk factors such as hypertension, diabetes, hyperlipidaemia or already established disease) need early detection and management wherein a machine learning model can be of great help.
+    </p>
+
+    <p class="project-info-para">
+      So, we have created a Machine Learning model that can predict if patient has a chance of heart failure or not with the help of the infomation entered by the user.
+      Our Model works on Random Forest Classification which is around 94 % accuracte in our case. 
+      The dataset used to train the model is taken from kaggle.
+      You can find the  
+      <a href="https://www.kaggle.com/andrewmvd/heart-failure-clinical-data"> Dataset Here.</a> 
+    </p>
+
+    <p>
+      To read More infomation about Heart failure and Cardiovascular diseases (CVDs) Click
+      <a href="https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-020-1023-5"> Here.</a> 
+    </p>
+
+    <h3 class="project-tagline text-center mt-5">Our model can help patients figure out if they have a chance of heart failure or not  </h3>
+    <h4 class="project-detail text-center mt-5"> Just Enter Your Details Below <br> & our Model will do the Rest </h4>
+  </div>
+
+    <div class="user-input container">
+
+        <div class="row p-2 mt-5">
+            <div class="col-lg-6 col-md-12">
+                <form method="POST">
+                    
+                    <div class="mb-3">
+                      <h5 for="exampleInputEmail1" class="form-label">Age</h5>
+                      <input type="text" class="form-control" name="age" 
+                      placeholder="Enter your Age"
+                      aria-describedby="valueHelp">
+                      <div id="valueHelp" class="form-text">We'll never share your Information with anyone else.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <h5 for="Anaemia_Select" class="form-label">Do you have Anaemia</h5>
+                        <select id="AnaemiaSelect" class="form-select" name="anaemia">
+                          <option value="1">Yes</option>
+                          <option value="0">No</option>
+                        </select>
+                      </div>
+
+                      <div class="mb-3">
+                        <h5 for="cpk" class="form-label">Creatinine phosphokinase (CPK) </h5>
+                        <input type="text" class="form-control" name="CPK" 
+                        placeholder="Enter the Level of the Creatinine phosphokinase enzyme in the blood">
+                      </div>
+
+                      <div class="mb-3">
+                        <h5 for="Diabetes" class="form-label">Do you have Diabetes </h5>
+                        <select id="diabetes" class="form-select" name="diabetes">
+                          <option value="1">Yes</option>
+                          <option value="0">No</option>
+                        </select>
+                      </div>
+
+                      <div class="mb-3">
+                        <h5 for="ejection_fraction" class="form-label">Ejection fraction</h5>
+                        <input type="text" class="form-control" name="ejection_fraction" 
+                        placeholder="Enter the Percentage of blood leaving ">
+                      </div>
+
+                      <div class="mb-3">
+                        <h5 for="High_Blood_Pressure" class="form-label">Do you have High Blood Pressure</h5>
+                        <select id="high_Blood_Pressure" class="form-select" name="highBP">
+                          <option value="1">Yes</option>
+                          <option value="0">No</option>
+                        </select>
+                      </div>
+
+
+                      <div class="mb-3">
+                        <h5 for="platelets" class="form-label">Platelets in the blood</h5>
+                        <input type="text" class="form-control" name="platelets" 
+                        placeholder="Enter the Platelets in the blood ">
+                      </div>
+
+                      <div class="mb-3">
+                        <h5 for="Serum_creatinine" class="form-label">Serum creatinine in the blood</h5>
+                        <input type="text" class="form-control" name="Serum_creatinine" 
+                        placeholder="Enter the Level of Serum creatinine in the blood ">
+                      </div>
+
+                      <div class="mb-3">
+                        <h5 for="Serum_sodioum" class="form-label">Serum sodioum in the blood</h5>
+                        <input type="text" class="form-control" name="Serum_sodioum" 
+                        placeholder="Enter the Level of Serum sodioum in the blood ">
+                      </div>
+
+                      <div class="mb-3">
+                        <h5 for="sex" class="form-label">What is your Sex</h5>
+                        <select id="sex" class="form-select" name="sex">
+                          <option value="1">Male</option>
+                          <option value="0">Female</option>
+                        </select>
+                      </div>
+
+                      <div class="mb-3">
+                        <h5 for="smoke" class="form-label">Does the patient smoke ? </h5>
+                        <select id="smoke" class="form-select" name="smoke">
+                          <option value="1">Yes</option>
+                          <option value="0">No</option>
+                        </select>
+                      </div>
+
+                      <div class="mb-3">
+                        <h5 for="time" class="form-label">Follow-up period </h5>
+                        <input type="text" class="form-control" name="time" 
+                        placeholder="Enter the no. of days of Follow up period">
+                      </div>
+
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                  
+            </div>
+            <div class="col-lg-6 col-md-12 result-column">
+              <h5 class="text-center result-head">
+                The Results will be displayed Here
+              </h5>
+                <h1 class="text-center result" >
+                    {{ result }}
+                </h2> 
+                <img src="../static/images/human-heart.png" class="human-heart mt-5" alt="heart.png">
+            </div>
+          
+        </div>
+        
+    </div>
+    
+   
+
+
+
+
+<!-- ############################################### -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+</body>
+
+<footer class="text-center mt-5 footer">
+  <h5 class="pt-4">This model is created by Eshan Jairath </h5>
+  <p>Dataset Taken from Kaggle</p>
+  <p style="margin-bottom: 0; color: gray; padding-bottom: 10px;">Copyright © 2021. </p>
+</footer>
+
+</html>
