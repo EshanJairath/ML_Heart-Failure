@@ -5,4 +5,3 @@ Machine Learning Model to predict heart failure depending upon various factors.
 3). run Model.ipynb
 4). Run app.py
 5). thats it !!
-Full working model can be seen on -->  https://heart-failure-test.herokuapp.com/
